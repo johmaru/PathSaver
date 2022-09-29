@@ -7,9 +7,11 @@
                              xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
                              xmlns:pathSaver="clr-namespace:PathSaver"
                              mc:Ignorable="d"
-                             Title="Johmaru's FileSaver" Height="768" Width="1280">
+                             Title="Johmaru's FileSaver" Height="768" Width="1280" Closing="MainWindow1_Closing">
 
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
+    <Grid><Frame Name="frame" NavigationUIVisibility="Hidden"/></Grid>
+
 </controls:AdonisWindow>

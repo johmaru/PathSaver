@@ -12,4 +12,6 @@
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
+    <Grid><Frame Name="frame" NavigationUIVisibility="Hidden"/></Grid>
+
 </controls:AdonisWindow>

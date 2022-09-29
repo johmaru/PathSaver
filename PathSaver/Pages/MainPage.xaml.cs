@@ -12,22 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AdonisUI.Controls;
 
-namespace PathSaver
+namespace PathSaver.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// MainPage.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : AdonisWindow
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
-            Uri uri = new Uri("/Pages/MainPage.xaml", UriKind.Relative);
-            frame.Source = uri;
         }
-
-     
     }
 }

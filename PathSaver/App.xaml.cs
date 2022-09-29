@@ -27,6 +27,13 @@ namespace PathSaver
 
             //インスタンス化
             var menu = new ContextMenuStrip();
+            ToolStripMenuItem openMenuItem = new ToolStripMenuItem();
+            openMenuItem.Text = "開く";
+            openMenuItem.Click += (a, e) =>
+            {
+                var mainwindow = new MainWindow();
+                mainwindow.Show();
+            };
 
             ToolStripMenuItem menuItem = new ToolStripMenuItem();
             menuItem.Text = "&終了";
@@ -34,6 +41,7 @@ namespace PathSaver
             {
                Application.Current.Shutdown();
             };
+            menu.Items.Add(openMenuItem);
             menu.Items.Add(menuItem);
             icon.ContextMenuStrip = menu;
         }

@@ -1,10 +1,10 @@
 # PathSaver
 
-##使用フレームワーク
+<dl>
+<dt>使用フレームワーク</dt>
+<dd>.Net 6.0</dd>
 
-**.Net 6.0**
-
-##使用ライブラリ
-
-**Adonis UI**
-**Adonis UI Classic Theme**
+<dt>使用ライブラリ</dt>
+<dd>Adonis UI</dd>
+<dd>Adonis UI Classic Theme</dd>
+</dl>

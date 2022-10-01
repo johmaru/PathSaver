@@ -6,7 +6,7 @@
                        xmlns:local="clr-namespace:PathSaver.Window"
                        xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
                        mc:Ignorable="d"
-                       Title="SettingWindow" Height="768" Width="1280" Closing="AdonisWindow_Closing">
+                       Title="SettingWindow" Height="768" Width="1280" Closing="AdonisWindow_Closing" WindowStartupLocation="CenterScreen">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>

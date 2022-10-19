@@ -7,11 +7,16 @@
                              xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
                              xmlns:pathSaver="clr-namespace:PathSaver"
                              mc:Ignorable="d"
-                             Title="Johmaru's FileSaver" Height="768" Width="1280" Closing="MainWindow1_Closing" WindowStartupLocation="CenterScreen">
+                             Title="Johmaru's FileSaver" Height="768" Width="1280" Closing="MainWindow1_Closing" WindowStartupLocation="CenterScreen" Background="White">
 
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
-    <Grid><Frame Name="frame" NavigationUIVisibility="Hidden"/></Grid>
-
+    <DockPanel Margin="5">
+        <StackPanel DockPanel.Dock="Bottom" 
+                    Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="Exit_BTN" Content="Exit" Width="80" Padding="2" Margin="1" Click="Exit_BTN_OnClick" />
+        </StackPanel>
+        <Grid><Frame Name="frame" NavigationUIVisibility="Hidden"/></Grid>
+    </DockPanel>
 </controls:AdonisWindow>

@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using AdonisUI.Controls;
-using Application = System.Windows.Application;
+using PathSaver.Properties;
 
 namespace PathSaver
 {
@@ -26,6 +26,16 @@ namespace PathSaver
         public MainWindow()
         {
             InitializeComponent();
+            if (Settings.Default.darkmode == true)
+            {
+                this.Background = Brushes.DarkGray;
+
+
+            }
+            else if (Settings.Default.darkmode == false)
+            {
+                this.Background = Brushes.White;
+            }
             Uri uri = new Uri("/Pages/MainPage.xaml", UriKind.Relative);
             frame.Source = uri;
         }
@@ -35,6 +45,11 @@ namespace PathSaver
             e.Cancel = true;
             this.Hide();
             return;
+        }
+
+        private void Exit_BTN_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

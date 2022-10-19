@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AdonisUI.Controls;
+using PathSaver.Window;
 
 namespace PathSaver.Pages
 {
@@ -23,6 +25,11 @@ namespace PathSaver.Pages
         public SettingPage()
         {
             InitializeComponent();
+        }
+
+        public void Exit_BTN_OnClick(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

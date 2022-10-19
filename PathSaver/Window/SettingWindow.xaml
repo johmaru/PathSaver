@@ -6,11 +6,20 @@
                        xmlns:local="clr-namespace:PathSaver.Window"
                        xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
                        mc:Ignorable="d"
-                       Title="SettingWindow" Height="768" Width="1280" Closing="AdonisWindow_Closing" WindowStartupLocation="CenterScreen">
+                       Title="SettingWindow" Height="504" Width="896" Closing="AdonisWindow_Closing" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Window.Style>
         <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
     </Window.Style>
-    <Grid>
-        <Frame Name="frame" NavigationUIVisibility="Hidden"/>
-    </Grid>
+    <DockPanel Margin="5,5,5,5">
+        <StackPanel DockPanel.Dock="Bottom" 
+                    Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="Exit_BTN" Content="Exit" Width="80" Padding="2" Margin="1" Click="Exit_BTN_OnClick" />
+        </StackPanel>
+
+        <Grid>
+            <CheckBox x:Name="DarkModeBTN" Content="ON/OFF" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" IsChecked="False" Checked="DarkModeBTN_Checked" Unchecked="DarkModeBTN_OnUnchecked" Click="DarkMOdeBTN_Click" Loaded="DarkModeBTN_Loaded"/>
+            <Label Content="DarkMode" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Width="69"/>
+        </Grid>
+
+    </DockPanel>
 </controls:AdonisWindow>

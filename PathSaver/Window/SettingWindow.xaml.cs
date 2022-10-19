@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AdonisUI.Controls;
+using PathSaver.Pages;
 
 namespace PathSaver.Window
 {
@@ -32,6 +33,11 @@ namespace PathSaver.Window
             e.Cancel = true;
             this.Hide();
             return;
+        }
+
+        private void Exit_BTN_OnClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

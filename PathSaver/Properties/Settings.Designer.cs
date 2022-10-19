@@ -46,5 +46,29 @@ namespace PathSaver.Properties {
                 this["WindowWide"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string 設定 {
+            get {
+                return ((string)(this["設定"]));
+            }
+            set {
+                this["設定"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool darkmode {
+            get {
+                return ((bool)(this["darkmode"]));
+            }
+            set {
+                this["darkmode"] = value;
+            }
+        }
     }
 }

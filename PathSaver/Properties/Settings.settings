@@ -8,5 +8,11 @@
     <Setting Name="WindowWide" Type="System.Double" Scope="User">
       <Value Profile="(Default)">1280</Value>
     </Setting>
+    <Setting Name="設定" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="darkmode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

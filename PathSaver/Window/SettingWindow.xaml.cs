@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using AdonisUI.Controls;
 using PathSaver.Pages;
+using PathSaver.Properties;
+using MessageBox = AdonisUI.Controls.MessageBox;
 
 namespace PathSaver.Window
 {
@@ -24,8 +26,16 @@ namespace PathSaver.Window
         public SettingWindow()
         {
             InitializeComponent();
-            Uri uri = new Uri("/Pages/SettingPage.xaml", UriKind.Relative);
-            frame.Source = uri;
+            if (Settings.Default.darkmode == true)
+            {
+                this.Background = Brushes.DarkGray;
+
+
+            }
+            else if (Settings.Default.darkmode == false)
+            {
+                this.Background = Brushes.White;
+            }
         }
 
         private void AdonisWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -39,5 +49,42 @@ namespace PathSaver.Window
         {
             this.Close();
         }
+
+        private void DarkModeBTN_Checked(object sender, RoutedEventArgs e)
+        {
+            if (DarkModeBTN.IsChecked == true)
+            {
+                Properties.Settings.Default.darkmode = true;
+                Properties.Settings.Default.Save();
+            }
+            MessageBox.Show("変更を適用するには設定ウィンドウを閉じてください");
+        }
+
+        private void DarkMOdeBTN_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void DarkModeBTN_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (Settings.Default.darkmode == true)
+            {
+                DarkModeBTN.IsChecked = true;
+            }
+            else
+            {
+                DarkModeBTN.IsChecked = false;
+            }
+        }
+
+        private void DarkModeBTN_OnUnchecked(object sender, RoutedEventArgs e)
+        {
+            if (DarkModeBTN.IsChecked == false)
+            {
+                Settings.Default.darkmode = false;
+                Settings.Default.Save();
+            }
+        }
+
+        
     }
 }

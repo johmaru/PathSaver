@@ -7,16 +7,30 @@
                              xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
                              xmlns:pathSaver="clr-namespace:PathSaver"
                              mc:Ignorable="d"
-                             Title="Johmaru's FileSaver" Height="768" Width="1280" Closing="MainWindow1_Closing" WindowStartupLocation="CenterScreen" Background="White">
+                             Title="Johmaru's FileSaver" Height="400" Width="800" Closing="MainWindow1_Closing" WindowStartupLocation="CenterScreen" Background="White"
+                             MinHeight="400"
+                             MinWidth="800" Unloaded="MainWindow1_Unloaded"
+>
+    
+ <Window.Style>
+     <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
+ </Window.Style>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
 
-    <Window.Style>
-        <Style TargetType="Window" BasedOn="{StaticResource {x:Type Window}}"/>
-    </Window.Style>
-    <DockPanel Margin="5">
-        <StackPanel DockPanel.Dock="Bottom" 
-                    Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="Exit_BTN" Content="Exit" Width="80" Padding="2" Margin="1" Click="Exit_BTN_OnClick" />
-        </StackPanel>
-        <Grid><Frame Name="frame" NavigationUIVisibility="Hidden"/></Grid>
-    </DockPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Button x:Name="Exit_BTN" Content="Exit" Width="80" Click="Exit_BTN_OnClick" />
+            <Grid>
+                <Frame Name="frame" NavigationUIVisibility="Hidden"/>
+            </Grid>
+        </Grid>
+    </Grid>
 </controls:AdonisWindow>

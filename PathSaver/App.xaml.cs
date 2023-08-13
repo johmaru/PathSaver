@@ -7,6 +7,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using AdonisUI.Controls;
+using PathSaver.Pages;
 using PathSaver.Properties;
 using Application = System.Windows.Application;
 using PathSaver.Window;
@@ -20,24 +22,46 @@ namespace PathSaver
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            var windowInt = Settings.Default.WindowInt;
+
+            windowInt = 0;
+
             //アイコン値指定
 
             NotifyIcon icon = new NotifyIcon();
 
             icon.Icon = new System.Drawing.Icon("./Assets/Image/FileIcon.ico");
             icon.Visible = true;
+            icon.DoubleClick += (s, e) =>
+            {
+                var active = Application.Current.Windows.OfType<AdonisWindow>().SingleOrDefault(x => x.IsActive);
+
+                if (!Application.Current.Windows.OfType<MainWindow>().Any())
+                {
+                    MainWindow mainwindow = new MainWindow();
+
+                    mainwindow.Show();
+                }
+                
+
+            };
 
             //インスタンス化
             var menu = new ContextMenuStrip();
-            
+
             //メニュー内容
             
             ToolStripMenuItem openMenuItem = new ToolStripMenuItem();
             openMenuItem.Text = "開く";
             openMenuItem.Click += (a, e) =>
             {
-                var mainwindow = new MainWindow();
-                mainwindow.Show();
+
+                if (!Application.Current.Windows.OfType<MainWindow>().Any())
+                {
+                    MainWindow mainwindow = new MainWindow();
+
+                    mainwindow.Show();
+                }
             };
 
             ToolStripMenuItem settingMenuItem = new ToolStripMenuItem();

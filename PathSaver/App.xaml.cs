@@ -68,7 +68,8 @@ namespace PathSaver
             settingMenuItem.Text = "&設定";
             settingMenuItem.Click += (b, e) =>
             {
-                var settingwindow = new SettingWindow();
+                SettingWindow settingwindow = new SettingWindow();
+
                 settingwindow.Show();
             };
 

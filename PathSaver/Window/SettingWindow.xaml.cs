@@ -40,9 +40,7 @@ namespace PathSaver.Window
 
         private void AdonisWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            e.Cancel = true;
-            this.Hide();
-            return;
+            
         }
 
         private void Exit_BTN_OnClick(object sender, RoutedEventArgs e)
@@ -52,12 +50,7 @@ namespace PathSaver.Window
 
         private void DarkModeBTN_Checked(object sender, RoutedEventArgs e)
         {
-            if (DarkModeBTN.IsChecked == true)
-            {
-                Properties.Settings.Default.darkmode = true;
-                Properties.Settings.Default.Save();
-            }
-            MessageBox.Show("変更を適用するには設定ウィンドウを閉じてください");
+            
         }
 
         private void DarkMOdeBTN_Click(object sender, RoutedEventArgs e)

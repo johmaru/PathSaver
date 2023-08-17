@@ -12,6 +12,7 @@
   <ItemGroup>
     <PackageReference Include="AdonisUI" Version="1.17.1" />
     <PackageReference Include="AdonisUI.ClassicTheme" Version="1.17.1" />
+    <PackageReference Include="Tommy" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup>

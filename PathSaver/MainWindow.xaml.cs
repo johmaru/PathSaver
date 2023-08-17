@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using AdonisUI.Controls;
 using PathSaver.Properties;
 using Application = System.Windows.Application;
+using DragEventArgs = System.Windows.DragEventArgs;
 
 namespace PathSaver
 {
@@ -56,6 +57,16 @@ namespace PathSaver
 
         private void MainWindow1_Unloaded(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void FileViewer_OnDrop(object sender, DragEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void FileViewer_OnDragOver(object sender, DragEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,6 +12,7 @@ using PathSaver.Pages;
 using PathSaver.Properties;
 using Application = System.Windows.Application;
 using PathSaver.Window;
+using Tommy;
 
 namespace PathSaver
 {
@@ -25,6 +26,25 @@ namespace PathSaver
             var windowInt = Settings.Default.WindowInt;
 
             windowInt = 0;
+
+            if (File.Exists("./Data/PathData.toml") == false)
+            {
+                Directory.CreateDirectory("Data");
+
+                TomlTable toml = new TomlTable
+                {
+                    ["title"] = "TOML Example"
+                };
+                using(StreamWriter writer = File.CreateText("./Data/PathData.toml"))
+                {
+                    toml.WriteTo(writer);
+                    writer.Flush();
+                }
+            }
+            else if (File.Exists("./Data/PathData.toml") != false)
+            {
+                Console.WriteLine("Toml File is Exists");
+            }
 
             //アイコン値指定
 
@@ -68,9 +88,12 @@ namespace PathSaver
             settingMenuItem.Text = "&設定";
             settingMenuItem.Click += (b, e) =>
             {
-                SettingWindow settingwindow = new SettingWindow();
+                if (!Application.Current.Windows.OfType<SettingWindow>().Any())
+                {
+                    SettingWindow settingwindow = new SettingWindow();
 
-                settingwindow.Show();
+                    settingwindow.Show();
+                }
             };
 
             ToolStripMenuItem menuItem = new ToolStripMenuItem();

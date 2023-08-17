@@ -32,5 +32,10 @@
                 <Frame Name="frame" NavigationUIVisibility="Hidden"/>
             </Grid>
         </Grid>
+
+        <ListBox x:Name="FileViewer" Grid.Row="0" Grid.Column="0" AllowDrop="True" Drop="FileViewer_OnDrop" DragOver="FileViewer_OnDragOver">
+
+        </ListBox>
+
     </Grid>
 </controls:AdonisWindow>

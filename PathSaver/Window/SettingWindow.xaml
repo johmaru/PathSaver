@@ -37,5 +37,28 @@
             <Label Content="DarkMode" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
 
-    </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3">
+            <TabControl>
+                <TabItem Header="GENERAL">
+                    <StackPanel>
+
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="FILE">
+                    <StackPanel>
+
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="KEY">
+                    <StackPanel>
+
+                    </StackPanel>
+                </TabItem>
+
+            </TabControl>
+        </Grid>
+
+        </Grid>
 </controls:AdonisWindow>

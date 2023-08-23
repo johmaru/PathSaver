@@ -26,9 +26,14 @@ namespace PathSaver.Window
         public SettingWindow()
         {
             InitializeComponent();
-            if ( Settings.Default.darkmode == true ) { this.Background = Brushes.DarkGray;}
+            
+            WindowTheme();
+        }
 
-            else if ( Settings.Default.darkmode == false ) { this.Background = Brushes.White; }
+        private void WindowTheme()
+        {
+            if ( Settings.Default.darkmode == false ) { Background = Brushes.White; DarkModeBTN.IsChecked = false; SettingsTab.Background = Brushes.White; }
+            else { Background = Brushes.DimGray; DarkModeBTN.IsChecked = true; SettingsTab.Background = Brushes.DimGray; }
         }
 
         private void AdonisWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -38,31 +43,21 @@ namespace PathSaver.Window
 
         private void Exit_BTN_OnClick(object sender, RoutedEventArgs e)
         { 
-            this.Close();
+            Close();
         }
 
         private void DarkModeBTN_Checked(object sender, RoutedEventArgs e)
         {
-            
+            if (DarkModeBTN.IsChecked == true) { Settings.Default.darkmode = true; Settings.Default.Save(); WindowTheme(); }
         }
 
         private void DarkMOdeBTN_Click(object sender, RoutedEventArgs e)
         {
         }
 
-        private void DarkModeBTN_Loaded(object sender, RoutedEventArgs e)
-        {
-            if ( Settings.Default.darkmode == true ) { DarkModeBTN.IsChecked = true; }
-            else { DarkModeBTN.IsChecked = false; }
-        }
-
         private void DarkModeBTN_OnUnchecked(object sender, RoutedEventArgs e)
         {
-            if (DarkModeBTN.IsChecked == false)
-            { 
-                Settings.Default.darkmode = false;
-                Settings.Default.Save();
-            }
+            if (DarkModeBTN.IsChecked == false) { Settings.Default.darkmode = false; Settings.Default.Save(); WindowTheme(); }
         }
     }
 }

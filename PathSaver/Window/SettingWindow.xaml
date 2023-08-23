@@ -30,15 +30,15 @@
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0">
-            <CheckBox x:Name="DarkModeBTN" Content="ON/OFF" HorizontalAlignment="Center" IsChecked="False" Checked="DarkModeBTN_Checked" Unchecked="DarkModeBTN_OnUnchecked" Click="DarkMOdeBTN_Click" Loaded="DarkModeBTN_Loaded"/>
+            <CheckBox x:Name="DarkModeBTN" Content="ON/OFF" HorizontalAlignment="Center" IsChecked="False" Checked="DarkModeBTN_Checked" Unchecked="DarkModeBTN_OnUnchecked" Click="DarkMOdeBTN_Click" />
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="0">
             <Label Content="DarkMode" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
 
-        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3">
-            <TabControl>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" x:Name="SettingsTabGrid">
+            <TabControl x:Name="SettingsTab">
                 <TabItem Header="GENERAL">
                     <StackPanel>
 

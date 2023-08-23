@@ -32,19 +32,11 @@ namespace PathSaver
                 Directory.CreateDirectory("Data");
 
                 TomlTable toml = new TomlTable
-                {
-                    ["title"] = "TOML Example"
-                };
-                using(StreamWriter writer = File.CreateText("./Data/PathData.toml"))
-                {
-                    toml.WriteTo(writer);
-                    writer.Flush();
-                }
+                    { ["title"] = "TOML Example"};
+                using(StreamWriter writer = File.CreateText("./Data/PathData.toml")) { toml.WriteTo(writer); writer.Flush();}
             }
-            else if (File.Exists("./Data/PathData.toml") != false)
-            {
-                Console.WriteLine("Toml File is Exists");
-            }
+
+            else if ( File.Exists("./Data/PathData.toml") != false ) { Console.WriteLine("Toml File is Exists" );}
 
             //アイコン値指定
 
@@ -52,19 +44,12 @@ namespace PathSaver
 
             icon.Icon = new System.Drawing.Icon("./Assets/Image/FileIcon.ico");
             icon.Visible = true;
-            icon.DoubleClick += (s, e) =>
-            {
-                var active = Application.Current.Windows.OfType<AdonisWindow>().SingleOrDefault(x => x.IsActive);
-
+            icon.DoubleClick += (s, e) => { var active = Application.Current.Windows.OfType<AdonisWindow>().SingleOrDefault(x => x.IsActive);
                 if (!Application.Current.Windows.OfType<MainWindow>().Any())
                 {
                     MainWindow mainwindow = new MainWindow();
-
                     mainwindow.Show();
-                }
-                
-
-            };
+                }};
 
             //インスタンス化
             var menu = new ContextMenuStrip();
@@ -73,35 +58,23 @@ namespace PathSaver
             
             ToolStripMenuItem openMenuItem = new ToolStripMenuItem();
             openMenuItem.Text = "開く";
-            openMenuItem.Click += (a, e) =>
+            openMenuItem.Click += (a, e) => { if (!Application.Current.Windows.OfType<MainWindow>().Any())
             {
-
-                if (!Application.Current.Windows.OfType<MainWindow>().Any())
-                {
-                    MainWindow mainwindow = new MainWindow();
-
-                    mainwindow.Show();
-                }
-            };
+                MainWindow mainwindow = new MainWindow();
+                mainwindow.Show();
+            }};
 
             ToolStripMenuItem settingMenuItem = new ToolStripMenuItem();
             settingMenuItem.Text = "&設定";
-            settingMenuItem.Click += (b, e) =>
+            settingMenuItem.Click += (b, e) => { if (!Application.Current.Windows.OfType<SettingWindow>().Any())
             {
-                if (!Application.Current.Windows.OfType<SettingWindow>().Any())
-                {
-                    SettingWindow settingwindow = new SettingWindow();
-
-                    settingwindow.Show();
-                }
-            };
+                SettingWindow settingwindow = new SettingWindow();
+                settingwindow.Show();
+            }};
 
             ToolStripMenuItem menuItem = new ToolStripMenuItem();
             menuItem.Text = "&終了";
-            menuItem.Click += (s, e) =>
-            {
-               Application.Current.Shutdown();
-            };
+            menuItem.Click += (s, e) => { Application.Current.Shutdown(); };
 
 
             //メニュー内容追加

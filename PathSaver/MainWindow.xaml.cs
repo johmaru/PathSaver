@@ -28,18 +28,12 @@ namespace PathSaver
         public MainWindow()
         {
             InitializeComponent();
-
             {
                 if (Settings.Default.darkmode == true)
-                {
-                    this.Background = Brushes.DarkGray;
-
-
-                }
+                { this.Background = Brushes.DarkGray;}
                 else if (Settings.Default.darkmode == false)
-                {
-                    this.Background = Brushes.White;
-                }
+                { this.Background = Brushes.White;}
+
                 Uri uri = new Uri("/Pages/MainPage.xaml", UriKind.Relative);
                 frame.Source = uri;
             }

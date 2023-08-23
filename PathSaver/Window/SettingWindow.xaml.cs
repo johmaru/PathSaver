@@ -26,16 +26,9 @@ namespace PathSaver.Window
         public SettingWindow()
         {
             InitializeComponent();
-            if (Settings.Default.darkmode == true)
-            {
-                this.Background = Brushes.DarkGray;
+            if ( Settings.Default.darkmode == true ) { this.Background = Brushes.DarkGray;}
 
-
-            }
-            else if (Settings.Default.darkmode == false)
-            {
-                this.Background = Brushes.White;
-            }
+            else if ( Settings.Default.darkmode == false ) { this.Background = Brushes.White; }
         }
 
         private void AdonisWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -44,7 +37,7 @@ namespace PathSaver.Window
         }
 
         private void Exit_BTN_OnClick(object sender, RoutedEventArgs e)
-        {
+        { 
             this.Close();
         }
 
@@ -59,25 +52,17 @@ namespace PathSaver.Window
 
         private void DarkModeBTN_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Settings.Default.darkmode == true)
-            {
-                DarkModeBTN.IsChecked = true;
-            }
-            else
-            {
-                DarkModeBTN.IsChecked = false;
-            }
+            if ( Settings.Default.darkmode == true ) { DarkModeBTN.IsChecked = true; }
+            else { DarkModeBTN.IsChecked = false; }
         }
 
         private void DarkModeBTN_OnUnchecked(object sender, RoutedEventArgs e)
         {
             if (DarkModeBTN.IsChecked == false)
-            {
+            { 
                 Settings.Default.darkmode = false;
                 Settings.Default.Save();
             }
         }
-
-        
     }
 }

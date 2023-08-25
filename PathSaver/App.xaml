@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:PathSaver"
              xmlns:adonisUi="clr-namespace:AdonisUI;assembly=AdonisUI" Startup="Application_Startup"
+             xmlns:strs="clr-namespace:PathSaver.Lang"
+             xmlns:properties="clr-namespace:PathSaver.Properties"
              ShutdownMode="OnExplicitShutdown"
              >
     <Application.Resources>

@@ -1,20 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using AdonisUI.Controls;
-using PathSaver.Pages;
 using PathSaver.Properties;
-using MessageBox = AdonisUI.Controls.MessageBox;
 
 namespace PathSaver.Window
 {
@@ -36,9 +24,9 @@ namespace PathSaver.Window
             else { Background = Brushes.DimGray; DarkModeBTN.IsChecked = true; SettingsTab.Background = Brushes.DimGray; }
         }
 
-        private void AdonisWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void AdonisWindow_Closing(object sender, CancelEventArgs e)
         {
-            
+
         }
 
         private void Exit_BTN_OnClick(object sender, RoutedEventArgs e)

@@ -5,6 +5,7 @@
                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                        xmlns:local="clr-namespace:PathSaver.Window"
                        xmlns:controls="clr-namespace:AdonisUI.Controls;assembly=AdonisUI"
+                       xmlns:properties="clr-namespace:PathSaver.Properties"
                        mc:Ignorable="d"
                        Title="SettingWindow" Height="400" Width="800" MinHeight="400" MinWidth="800" Closing="AdonisWindow_Closing" WindowStartupLocation="CenterScreen">
     <Window.Style>
@@ -26,32 +27,32 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="3" Grid.Column="2">
-            <Button x:Name="Exit_BTN" Content="Exit" Click="Exit_BTN_OnClick"/>
+            <Button x:Name="Exit_BTN" Content="{x:Static properties:Resources.Back}" Click="Exit_BTN_OnClick"/>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="0">
-            <CheckBox x:Name="DarkModeBTN" Content="ON/OFF" HorizontalAlignment="Center" IsChecked="False" Checked="DarkModeBTN_Checked" Unchecked="DarkModeBTN_OnUnchecked" Click="DarkMOdeBTN_Click" />
+            <CheckBox x:Name="DarkModeBTN" Content="{x:Static properties:Resources.ONOFF}" HorizontalAlignment="Center" IsChecked="False" Checked="DarkModeBTN_Checked" Unchecked="DarkModeBTN_OnUnchecked" Click="DarkMOdeBTN_Click" />
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="0">
-            <Label Content="DarkMode" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="{x:Static properties:Resources.DarkMode}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
 
         <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="3" x:Name="SettingsTabGrid">
             <TabControl x:Name="SettingsTab">
-                <TabItem Header="GENERAL">
+                <TabItem Header="{x:Static properties:Resources.General}">
                     <StackPanel>
 
                     </StackPanel>
                 </TabItem>
 
-                <TabItem Header="FILE">
+                <TabItem Header="{x:Static properties:Resources.File}">
                     <StackPanel>
 
                     </StackPanel>
                 </TabItem>
 
-                <TabItem Header="KEY">
+                <TabItem Header="{x:Static properties:Resources.Key}">
                     <StackPanel>
 
                     </StackPanel>

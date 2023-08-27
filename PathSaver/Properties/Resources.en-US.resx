@@ -27,4 +27,22 @@
     <data name="Exit" xml:space="preserve">
         <value>AppExit</value>
     </data>
+    <data name="Back" xml:space="preserve">
+        <value>Back</value>
+    </data>
+    <data name="ONOFF" xml:space="preserve">
+        <value>ON/OFF</value>
+    </data>
+    <data name="DarkMode" xml:space="preserve">
+        <value>DarkMode</value>
+    </data>
+    <data name="General" xml:space="preserve">
+        <value>GENERAL</value>
+    </data>
+    <data name="File" xml:space="preserve">
+        <value>FILE</value>
+    </data>
+    <data name="Key" xml:space="preserve">
+        <value>KeyBoard</value>
+    </data>
 </root>

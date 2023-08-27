@@ -27,4 +27,22 @@
     <data name="Exit" xml:space="preserve">
         <value>終了</value>
     </data>
+    <data name="Back" xml:space="preserve">
+        <value>戻る</value>
+    </data>
+    <data name="ONOFF" xml:space="preserve">
+        <value>オン/オフ</value>
+    </data>
+    <data name="DarkMode" xml:space="preserve">
+        <value>ダークモード</value>
+    </data>
+    <data name="General" xml:space="preserve">
+        <value>一般</value>
+    </data>
+    <data name="File" xml:space="preserve">
+        <value>ファイル</value>
+    </data>
+    <data name="Key" xml:space="preserve">
+        <value>キーボード</value>
+    </data>
 </root>

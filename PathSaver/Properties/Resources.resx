@@ -129,4 +129,22 @@
   <data name="Exit" xml:space="preserve">
     <value>AppExit</value>
   </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="ONOFF" xml:space="preserve">
+    <value>ONOFF</value>
+  </data>
+  <data name="DarkMode" xml:space="preserve">
+    <value>DarkMode</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
 </root>
